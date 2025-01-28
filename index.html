@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f2f2f2;
+    }
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    input {
+        padding: 8px;
+        width: 80%;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .result {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Resolva o enigma</h2>
+    <p>Qual é a letra que vem depois de "m" no alfabeto?</p>
+    <input type="text" id="resposta" placeholder="Digite sua resposta">
+    <button onclick="verificarResposta()">Verificar</button>
+    <div class="result" id="resultado"></div>
+</div>
+
+<script>
+    function verificarResposta() {
+        var resposta = document.getElementById("resposta").value.toLowerCase();
+        var resultado = document.getElementById("resultado");
+
+        if (resposta === "n") {
+            resultado.textContent = "Parabéns, a resposta está correta!";
+            resultado.style.color = "green";
+        } else {
+            resultado.textContent = "Resposta incorreta. Tente novamente.";
+            resultado.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+
+</html>
